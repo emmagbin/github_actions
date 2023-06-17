@@ -1,4 +1,4 @@
-name: simco Project Publish to shared server cPanel
+name: simco enteprise Project Publish to shared server cPanel
 
 on:
   push:
