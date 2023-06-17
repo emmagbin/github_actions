@@ -2,7 +2,7 @@ name: simco Project Publish to cPanel
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   FTP-Deploy-Action:
