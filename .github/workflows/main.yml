@@ -17,8 +17,9 @@ jobs:
       - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
-          server: "ftp.chapelsage.space"
-          username: "ftp_simco@simcoenterprise.com"
-          password: "[6KT#uEElt$m"
+
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
           server-dir: "/"
           args: --debug
