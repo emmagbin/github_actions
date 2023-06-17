@@ -20,5 +20,5 @@ jobs:
           server: "ftp.chapelsage.space"
           username: "ftp_simco@simcoenterprise.com"
           password: "[6KT#uEElt$m"
-          server-dir: "/simcoenterprise.com/"
+          server-dir: "/"
           args: --debug
