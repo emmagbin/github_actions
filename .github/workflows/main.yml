@@ -1,21 +1,27 @@
 name: simco Project Publish to cPanel
- on: push
-   jobs:
-  web-deploy:
-    name: 🎉 Deploy
-    runs-on: ubuntu-latest
-    steps:
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v2
+on:
+  push:
+    branches:
+      - master
 
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.3.0
-      with:
-         server: ${{ secrets.FTP_SERVER }}
-         username: ${{ secrets.FTP_USERNAME }}
-         password: ${{ secrets.FTP_PASSWORD }}
-         protocol: ftps
-         port: 21 # todo replace with your web hosts ftps port
-		 
-		 
+jobs:
+  FTP-Deploy-Action:
+    name: FTP-Deploy-Action codes
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2.1.0
+      
+
+      - name: FTP Deploy
+        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+        with:
+         port:21
+          ftp-server: ${{ secrets.FTP_SERVER }}
+          ftp-username: ${{ secrets.FTP_USERNAME }}
+          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: /home/chapmpug/simcoenterprise.com/
+		  
+		  
           
