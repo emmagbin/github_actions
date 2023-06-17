@@ -12,12 +12,12 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2.1.0
+        uses: actions/checkout@v2
 
       - name: FTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+        uses: SamKirkland/FTP-Deploy-Action@4.1.1
         with:
           ftp-server: "ftp.chapelsage.space"
           ftp-username: "ftp_simco@simcoenterprise.com"
           ftp-password: "[6KT#uEElt$m"
-          local-dir: "./path/to/local/directory"
+          args: --debug
