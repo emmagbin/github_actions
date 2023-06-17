@@ -20,4 +20,4 @@ jobs:
           ftp-server: "ftp.chapelsage.space"
           ftp-username: "ftp_simco@simcoenterprise.com"
           ftp-password: "[6KT#uEElt$m"
-          server-dir: "./home/chapmpug/simcoenterprise.com/"
+          local-dir: "./path/to/local/directory"
