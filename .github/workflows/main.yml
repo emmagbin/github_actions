@@ -1,6 +1,5 @@
 name: simco Project Publish to cPanel
  on: push
-   name: 🚀 Deploy website on push
    jobs:
   web-deploy:
     name: 🎉 Deploy
