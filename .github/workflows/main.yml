@@ -1,4 +1,5 @@
 name: simco Project Publish to cPanel
+
 on:
   push:
     branches:
@@ -12,13 +13,11 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2.1.0
-      
 
       - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@3.1.1
         with:
-          ftp-server: ${{ secrets.FTP_SERVER }}
-          ftp-username: ${{ secrets.FTP_USERNAME }}
-          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          ftp-server:"ftp.chapelsage.space"
+          ftp-Username: "ftp_simco@simcoenterprise.com"
+          ftp-password: "[6KT#uEElt$m"
           server-dir: /home/chapmpug/simcoenterprise.com/
-          
