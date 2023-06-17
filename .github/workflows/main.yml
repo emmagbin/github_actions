@@ -1,4 +1,4 @@
-name: sinco Project Publish to cPanel
+name: simco Project Publish to cPanel
 on:
   push:
     branches:
