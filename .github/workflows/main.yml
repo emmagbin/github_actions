@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: FTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
           ftp-server: "ftp.chapelsage.space"
           ftp-username: "ftp_simco@simcoenterprise.com"
